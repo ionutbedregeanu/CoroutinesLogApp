@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">CoroutinesLogApp</string>
-    <string name="password_hint">password</string>
-    <string name="username_hint">username</string>
+    <string name="token_hint">Token</string>
+    <string name="username_hint">Username</string>
     <string name="login">Login</string>
+    <string name="invalid_username">Invalid username!</string>
+    <string name="invalid_token">Invalid token!</string>
+    <string name="error_title">Error</string>
+    <string name="ok">OK</string>
+    <string name="try_again_later">Try again later!</string>
+    <string name="network_connection_established">Network connection established!</string>
+    <string name="unavailable_network_connection">Unavailable network connection</string>
 </resources>
