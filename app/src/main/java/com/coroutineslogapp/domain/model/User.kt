@@ -1,7 +1,7 @@
 package com.coroutineslogapp.domain.model
 
 data class User(
-    val username: String?,
+    val username: String,
     val avatarUrl: String?,
     val biography: String?,
     val location: String?,

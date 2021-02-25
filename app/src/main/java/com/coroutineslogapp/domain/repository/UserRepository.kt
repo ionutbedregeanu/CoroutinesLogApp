@@ -9,5 +9,7 @@ interface UserRepository {
 
     suspend fun getRemoteUser(username: String, accessToken: String): Flow<DomainUserResponse>
     suspend fun saveUserLocally(user: User)
-    suspend fun getPrefsUser(): User?
+    suspend fun getUserFromDatabase(): User?
+    suspend fun getRemoteUserByStoredToken(): Flow<DomainUserResponse>
+    suspend fun logout()
 }

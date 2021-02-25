@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/back_arrow"
+        app:title="@string/settings"
+        app:titleTextColor="@android:color/white" />
+
+    <com.coroutineslogapp.ui.customviews.SettingsItem
+        android:id="@+id/affiliation_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:description="@string/affiliation_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:name="@string/affiliation" />
+
+    <com.coroutineslogapp.ui.customviews.SettingsItem
+        android:id="@+id/sort_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:description="@string/sort_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/affiliation_item"
+        app:name="@string/sort" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

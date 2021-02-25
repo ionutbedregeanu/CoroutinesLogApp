@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/avatar_size"
+        android:layout_height="@dimen/avatar_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/biography_header"
+        style="@style/ProfileFieldHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_field__margin"
+        android:text="@string/biography"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/biography_content"
+        style="@style/ProfileFieldContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/biography"
+        app:layout_constraintStart_toStartOf="@id/biography_header"
+        app:layout_constraintTop_toBottomOf="@id/biography_header" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/location_header"
+        style="@style/ProfileFieldHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_field__margin"
+        android:text="@string/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/biography_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/location_content"
+        style="@style/ProfileFieldContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profile_field__margin"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/location_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/location_header"
+        app:layout_constraintTop_toTopOf="@id/location_header" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/email_header"
+        style="@style/ProfileFieldHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_field__margin"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/email_content"
+        style="@style/ProfileFieldContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profile_field__margin"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/email_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/email_header"
+        app:layout_constraintTop_toTopOf="@id/email_header" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/created_header"
+        style="@style/ProfileFieldHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_field__margin"
+        android:text="@string/created"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/created_content"
+        style="@style/ProfileFieldContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profile_field__margin"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/created_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/created_header"
+        app:layout_constraintTop_toTopOf="@id/created_header" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/updated_header"
+        style="@style/ProfileFieldHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_field__margin"
+        android:text="@string/updated"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/created_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/updated_content"
+        style="@style/ProfileFieldContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profile_field__margin"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/updated_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/updated_header"
+        app:layout_constraintTop_toTopOf="@id/updated_header" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/public_repos_header"
+        style="@style/ProfileFieldHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_field__margin"
+        android:text="@string/public_repos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updated_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/public_repos_content"
+        style="@style/ProfileFieldContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profile_field__margin"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/public_repos_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/public_repos_header"
+        app:layout_constraintTop_toTopOf="@id/public_repos_header" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/private_repos_header"
+        style="@style/ProfileFieldHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_field__margin"
+        android:text="@string/private_repos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/public_repos_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/private_repos_content"
+        style="@style/ProfileFieldContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profile_field__margin"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/private_repos_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/private_repos_header"
+        app:layout_constraintTop_toTopOf="@id/private_repos_header" />
+</merge>

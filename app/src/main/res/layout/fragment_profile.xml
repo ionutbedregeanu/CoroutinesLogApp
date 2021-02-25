@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/profile_menu"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_screen_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_toolbar">
+
+        <com.coroutineslogapp.ui.customviews.ProfileDetailsView
+            android:id="@+id/profile_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.coroutineslogapp.ui.customviews.CustomButton
+        android:id="@+id/bt_repositories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profile_button_margin"
+        android:layout_marginEnd="@dimen/profile_button_margin"
+        android:layout_marginBottom="@dimen/profile_button_margin"
+        android:clickable="true"
+        android:focusable="true"
+        app:icon="@drawable/ic_archive"
+        app:layout_constraintBottom_toTopOf="@id/bt_contact_by_email"
+        app:text="@string/view_repositories" />
+
+    <com.coroutineslogapp.ui.customviews.CustomButton
+        android:id="@+id/bt_contact_by_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profile_button_margin"
+        android:layout_marginEnd="@dimen/profile_button_margin"
+        android:layout_marginBottom="@dimen/profile_button_margin"
+        android:background="@drawable/grey_button_selector"
+        android:clickable="true"
+        android:focusable="true"
+        app:icon="@drawable/ic_globe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:text="@string/contact_by_email" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="@dimen/loader_dimension"
+        android:layout_height="100dp"
+        android:indeterminateTint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/error_container"
+        layout="@layout/layout_something_went_wrong"
+        android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

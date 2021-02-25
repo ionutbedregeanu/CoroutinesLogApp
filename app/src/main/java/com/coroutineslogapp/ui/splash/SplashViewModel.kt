@@ -16,7 +16,7 @@ class SplashViewModel @Inject constructor(private val userRepository: UserReposi
 
     init {
         viewModelScope.launch(viewModelScope.coroutineContext + Dispatchers.Main) {
-            if (userRepository.getPrefsUser() == null) {
+            if (userRepository.getUserFromDatabase() == null) {
                 navigationDirection.postValue(SplashDirections.Login)
             } else {
                 navigationDirection.postValue(SplashDirections.Profile)

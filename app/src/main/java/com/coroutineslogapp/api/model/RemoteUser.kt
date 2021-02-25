@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class RemoteUser(
     @SerializedName("login")
-    var username: String?,
+    var username: String,
     @SerializedName("avatar_url")
     var avatarUrl: String?,
     @SerializedName("bio")

@@ -7,8 +7,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/logo"
-        android:layout_width="@dimen/logo_width"
-        android:layout_height="@dimen/logo_height"
+        android:layout_width="@dimen/logo_dimension"
+        android:layout_height="@dimen/logo_dimension"
         android:src="@drawable/octocat"
         app:layout_constraintBottom_toTopOf="@+id/username_container"
         app:layout_constraintEnd_toEndOf="parent"
